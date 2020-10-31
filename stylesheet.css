@@ -1,0 +1,159 @@
+body {
+    font-family:'Playfair Display SC', serif;
+}
+
+#indexHead {
+    background-image: url("images/ocean.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 300px 0px 300px 0px;
+}
+
+#savedHead {
+    background-image: url("images/airplane.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0px 200px 0px;
+}
+
+#savedHead h1 {
+    text-align: center;
+    margin: 8rem;
+}
+
+.container {
+    border-radius: 6px;
+}
+.btn-large {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+}
+h2, h3, input {
+    color: white;
+}
+nav {
+    background-color: #345291;
+    height: 89px;
+}
+nav .nav-wrapper {
+    position: relative;
+    height: 100%;
+}
+nav .brand-logo {
+ font-size: 55px;
+ margin-top: 10px;
+}
+.search-bar {
+    margin: 0 auto;
+    max-width: 1280px;
+    width: 90%;
+    background: #345291b8;
+    padding: 20px;
+}
+.where-when {
+    max-width: 500px;
+    margin: 20px;
+}
+#currency {
+    background-image: url("images/currency2.jpg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px 100px 0px;
+}
+#flights {
+    background-image: url("images/airport.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px 100px 0px;
+}
+#weatherbg {
+    background-image: url("images/weather.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 100px 0px 100px 0px;
+}
+
+.card .card-image img {
+    object-fit: cover;
+    margin: auto;
+    max-height: 200px;
+    max-width: 100%;
+}
+select {
+    display: block;
+    height: 3.7rem;
+}
+#map-example-container {
+    height: 300px;
+    max-width: 700px;
+    margin: auto;
+}
+.checking1 {
+    padding: 1rem 2rem;
+    background-color: cadetblue;
+    color: white;
+    margin-bottom: .5rem;  
+}
+#weather.card-content {
+    height: 390px;
+}
+.blue-grey.darken-1 {
+    background-color: #bc4a6b !important;
+}
+#savedflights{
+    width: 50%;
+    margin: auto;
+}
+.savedheading {
+    font-size: 18px;
+    font-weight: 700;
+}
+#clearbtn {
+    text-align: center;
+    color: #06AED5;
+    font-size: larger;
+}
+#clearbtn:hover {
+    text-decoration: underline;
+    color: rgb(99, 213, 238);
+    cursor: pointer;
+}
+#weather {
+    justify-content: center;
+    align-items: center;
+  }
+@media (max-width: 414px){
+h2 {
+    font-size: 32px;
+}
+/* mobile navigation */
+nav {
+    height: 82px;
+}
+nav ul a.btn-large {
+    margin-top: 84px;
+    margin-left: auto;
+    margin-right: auto;
+}
+nav .brand-logo {
+    font-size: 39px;
+    margin-top: 10px;
+}
+nav .brand-logo.center {
+    width: fit-content;
+}
+/* end mobile navigation */
+.card .card-image img {
+    max-height: 150px;
+}
+#savedHead h1 {
+    text-align: right;
+    font-size: 3.5rem;
+    margin: 2rem;
+}
+
+}

@@ -1,0 +1,150 @@
+<?php header("Access-Control-Allow-Origin: https://nickkdb.github.io/Group5-Repository); ?>
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Saver</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <!-- navigation -->
+    <nav>
+        <div class="nav-wrapper">
+            <div class="brand-logo center">Flight Saver</div>
+            <ul id="nav-mobile" class="left">
+                <li><a href="saved_flights.html" class="saved waves-effect waves-light btn-large">Saved Flights</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- end navigation -->
+    <header id="indexHead">
+        <!-- form -->
+        <form class="container search-bar">
+            <div class="row">
+                <div class="where-when left">
+                    <h3>Where are you going?</h3>
+                    <div class="row">
+                        <div class="col s6">
+                            <input id="comingFrom" type="text" placeholder="Departure"></input>
+                            <select id="getAirportFrom" value="" placeholder="Choose Airport"></select>
+                        </div>
+                        <div class="col s6">
+                            <input id="goingTo" type="text" placeholder="Destination"></input>
+                            <select id="getAirportTo" placeholder="Choose Airport"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="where-when left">
+                    <h3>When are you going?</h3>
+                    <div class="row">
+                        <div class="col s6">
+                            <input id="from" type="text" class="datepicker" placeholder="From"></input></div>
+                        <div class="col s6">
+                            <input id="to" type="text" class="datepicker" placeholder="To"></input></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <a href="" id="find" class="waves-effect waves-light btn-large">Find Flights</a>
+            </div>
+        </form>
+        <!-- end form -->
+    </header>
+    <section>
+        <div class="row">
+            <!-- flight info -->
+            <div class="col s12 m6">
+                <div class="card">
+                    <div id="flights" class="card-image">
+                        <span class="card-title">
+                            <h2>Flight Information</h2>
+                        </span>
+                    </div>
+                    <div id="flight-info" class="card-content"></div>
+
+                    <div id="map-example-container"></div>
+                    <input type="search" id="input-map" class="form-control" placeholder="Where are we going?"
+                        style="display:none" />
+                </div>
+            </div>
+            <!-- end flight info -->
+            <!-- curreny calculator -->
+            <div class="col s12 m6">
+                <div class="card">
+                    <div id="currency" class="card-image">
+                        <span class="card-title">
+                            <h2>Currency</h2>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="row">
+                            <select id="fromCurrency" class="col s4"></select>
+                            <select id="toCurrency" class="col s4"></select>
+                            <button id="getCurrency" class="col s4 waves-effect waves-light btn-large">Get Exchange
+                                Rate</button></div>
+                        <div id="displayCurrency"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- end currency calculator -->
+        </div>
+        <!-- weather forcast -->
+        <div class="row">
+            <div class="col s12">
+                <div class="card">
+                    <div id="weatherbg" class="card-image">
+                        <span class="card-title">
+                            <h2 id= "weatherhead">Weather</h2>
+                        </span>
+                    </div>
+                    <div id="weather" class="row card-content">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end weather forcast -->
+    </section>
+
+<!-- Modal Structure -->
+  <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Uh oh!</h4>
+          <p>You've already saved this flight!</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="modal-action modal-close waves-effect waves-red btn red lighten-1">Close</a>     
+          </div>
+      </div>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/leaflet/1/leaflet.css" />
+    <script src="https://cdn.jsdelivr.net/leaflet/1/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/places.js@1.19.0/dist/cdn/placesAutocompleteDataset.min.js"></script>
+    <script src="currencyScript.js"></script>
+    <script src="comboScript.js"></script>
+    <script src="mapScript.js"></script>
+    <script>
+        const calendar = document.querySelector('#from');
+        M.Datepicker.init(calendar, {
+            format: 'yyyy-mm-dd',
+            showClearBtn: true
+        });
+        const calendar2 = document.querySelector('#to');
+        M.Datepicker.init(calendar2, {
+            format: 'yyyy-mm-dd',
+            showClearBtn: true
+        });
+    </script>
+</body>
+
+</html>
