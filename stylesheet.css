@@ -19,6 +19,7 @@ body {
 }
 
 #savedHead h1 {
+    color: #345291;
     text-align: center;
     margin: 8rem;
 }
@@ -111,11 +112,6 @@ select {
 .savedheading {
     font-size: 18px;
     font-weight: 700;
-}
-#clearbtn {
-    text-align: center;
-    color: #06AED5;
-    font-size: larger;
 }
 #clearbtn:hover {
     text-decoration: underline;
