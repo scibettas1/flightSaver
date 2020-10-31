@@ -113,11 +113,6 @@ select {
     font-size: 18px;
     font-weight: 700;
 }
-#clearbtn:hover {
-    text-decoration: underline;
-    color: rgb(99, 213, 238);
-    cursor: pointer;
-}
 #weather {
     justify-content: center;
     align-items: center;
